@@ -29,9 +29,10 @@ This section describes how to install the plugin and get it working.
 
 e.g.
 
-1. Upload `bugira.php` to the `/wp-content/plugins/` directory
-1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Place `<?php do_action('plugin_name_hook'); ?>` in your templates
+1. Download latest code at https://github.com/bugiratracker/bugira_wp_plugin/releases/download/1.0.0/bugira_wp_plugin.zip
+2. Unpack `bugira_wp_plugin.zip` to the `/wp-content/plugins/` directory or upload it through the 'Plugins' menu in WordPress
+3. Activate the plugin through the 'Plugins' menu in WordPress
+
 
 == Frequently Asked Questions ==
 
