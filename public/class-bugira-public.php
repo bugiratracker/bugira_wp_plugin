@@ -103,9 +103,8 @@ class Bugira_Public
         $key = get_option($this->plugin_name . '_api_key');
 
         if (!empty($key)) {
-            wp_register_script($this->plugin_name,
-                'https://cdn.jsdelivr.net/npm/bugira-widget@0.18.0/dist/bugira.min.js?' . $this->version, ['jquery'],
-                $this->version, true);
+            wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/widget_0.18.0.js', ['jquery'],
+                $this->version, false);
             wp_localize_script($this->plugin_name, '__bugira_config',
                 ['api_key' => $key, 'createDiv' => true]);
             wp_enqueue_script($this->plugin_name);
