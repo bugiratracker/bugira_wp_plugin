@@ -48,7 +48,7 @@ Yes, you need to sign up at https://www.bugira.com to get license key
 
 = Does Plugin Loads 3rd Party JavaScript Code =
 
-Yes, external JavaScript library from https://cdn.jsdelivr.net/npm/bugira-widget@0.18.0/dist/bugira.min.js
+No. All files are included. However, widget will make requests to external server.
 
 == Screenshots ==
 
@@ -56,6 +56,12 @@ Yes, external JavaScript library from https://cdn.jsdelivr.net/npm/bugira-widget
 
 == Changelog ==
 
-= 1.0 =
+= 1.0.2 =
+* Moved https://cdn.jsdelivr.net/npm/bugira-widget@0.18.0/dist/bugira.min.js to public/js/widget_0.18.0.js
+
+= 1.0.1 =
+* Readme Updates
+
+= 1.0.0 =
 * Easy install.
 * Option page for API key.
