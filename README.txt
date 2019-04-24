@@ -1,7 +1,7 @@
 === Plugin Name ===
 Contributors: mkozlovatbugira
 Donate link: https://www.bugira.com
-Tags: comments, user feadback, bugtracker, issues
+Tags: bugira, comments, user feadback, bugtracker, issues
 Requires at least: 3.0.1
 Tested up to: 5.1.1
 Stable tag: 1.0.2
