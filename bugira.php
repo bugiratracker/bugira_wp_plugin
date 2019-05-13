@@ -9,14 +9,14 @@
  * that starts the plugin.
  *
  * @link              https://www.bugira.com
- * @since             1.0.2
+ * @since             1.0.3
  * @package           Bugira
  *
  * @wordpress-plugin
  * Plugin Name:       Bugira
  * Plugin URI:        https://github.com/bugiratracker/bugira_wp_plugin
  * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
- * Version:           1.0.0
+ * Version:           1.0.3
  * Author:            Bugira.com
  * Author URI:        https://www.bugira.com
  * License:           GPL-2.0+
@@ -35,7 +35,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'BUGIRA_VERSION', '1.0.2' );
+define( 'BUGIRA_VERSION', '1.0.3' );
 
 /**
  * The code that runs during plugin activation.

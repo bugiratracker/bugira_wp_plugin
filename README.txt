@@ -28,6 +28,9 @@ Are you working with clients on another prototype? Let them submit feedback with
 USER ACCEPTENCE TESTING
 Are you still gathering UAT feedback in spreadsheets? There is a better option. Bugira widget allows testers submit feedback right inside testing session as soon as the issue arise. Testers can submit screenshots and descriptions and Bugira will take care of the rest.
 
+PRIVACY
+Privacy is our top priority. This why Bugira Bugtracker does not send any information with explicit concern from the end user.
+
 == Installation ==
 
 This section describes how to install the plugin and get it working.
@@ -55,6 +58,11 @@ No. All files are included. However, widget will make requests to external serve
 /assets/screenshot-1.png
 
 == Changelog ==
+
+= 1.0.3 =
+* Removed boilerplate code
+* Started transactions
+* Readme Updates
 
 = 1.0.2 =
 * Moved https://cdn.jsdelivr.net/npm/bugira-widget@0.18.0/dist/bugira.min.js to public/js/widget_0.18.0.js

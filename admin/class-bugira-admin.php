@@ -56,24 +56,38 @@ class Bugira_Admin
 
     }
 
+    /**
+     * Init admin menu
+     *
+     * @since    1.0.0
+     */
     public function plugin_admin_init()
     {
         register_setting('plugin_options', $this->plugin_name . '_api_key', [$this, 'plugin_options_validate']);
 
-        add_settings_field($this->plugin_name . '_api_key', 'Api Key', [$this, 'plugin_setting_string'],
+        add_settings_field($this->plugin_name . '_api_key', __('Api Key'), [$this, 'plugin_setting_string'],
             $this->plugin_name, 'plugin_main');
 
-        add_settings_section('plugin_main', ucfirst($this->plugin_name) . ' Widget Settings',
+        add_settings_section('plugin_main', ucfirst($this->plugin_name) . ' '.__( 'Widget Settings'),
             [$this, 'plugin_section_text'], $this->plugin_name);
     }
 
+    /**
+     * Add Settings page
+     *
+     * @since    1.0.0
+     */
     function plugin_admin_add_page()
     {
         add_options_page(ucfirst($this->plugin_name), ucfirst($this->plugin_name), 'manage_options', $this->plugin_name,
             [$this, 'plugin_options_page']);
     }
 
-
+    /**
+     * Admin page components
+     *
+     * @since    1.0.0
+     */
     public function plugin_options_page()
     {
         echo '<form action="options.php" method="post">';
@@ -82,75 +96,38 @@ class Bugira_Admin
         echo '</form>';
     }
 
-
+    /**
+     * Custom input
+     *
+     * @since    1.0.0
+     */
     public function plugin_setting_string()
     {
 
         echo '<input id="' . $this->plugin_name . '_api_key" name="' . $this->plugin_name . '_api_key" size="40" type="text" value="' . get_option($this->plugin_name . '_api_key') . '" />';
     }
 
-
+    /**
+     * Helper Test
+     *
+     * @since    1.0.0
+     */
     public function plugin_section_text()
     {
 
-        echo '<p>In order to enable feadback widget, you need to provide API key. If you do not have a key, please register @ <a href="https://www.bugira.com/" target="_blank">www.bugira.com</a> to get a key.</p>';
+        echo '<p>In order to enable feedback widget, you need to provide API key. If you do not have a key, please register @ <a href="https://www.bugira.com/" target="_blank">www.bugira.com</a> to get a key.</p>';
     }
 
+    /**
+     * Validation
+     *
+     * @since    1.0.0
+     * @param $input
+     * @return mixed
+     */
     public function plugin_options_validate($input)
     {
 
         return $input;
     }
-
-
-    /**
-     * Register the stylesheets for the admin area.
-     *
-     * @since    1.0.0
-     */
-    public function enqueue_styles()
-    {
-
-        /**
-         * This function is provided for demonstration purposes only.
-         *
-         * An instance of this class should be passed to the run() function
-         * defined in Bugira_Loader as all of the hooks are defined
-         * in that particular class.
-         *
-         * The Bugira_Loader will then create the relationship
-         * between the defined hooks and the functions defined in this
-         * class.
-         */
-
-        wp_enqueue_style($this->plugin_name, plugin_dir_url(__FILE__) . 'css/bugira-admin.css', [], $this->version,
-            'all');
-
-    }
-
-    /**
-     * Register the JavaScript for the admin area.
-     *
-     * @since    1.0.0
-     */
-    public function enqueue_scripts()
-    {
-
-        /**
-         * This function is provided for demonstration purposes only.
-         *
-         * An instance of this class should be passed to the run() function
-         * defined in Bugira_Loader as all of the hooks are defined
-         * in that particular class.
-         *
-         * The Bugira_Loader will then create the relationship
-         * between the defined hooks and the functions defined in this
-         * class.
-         */
-
-        wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/bugira-admin.js', ['jquery'],
-            $this->version, false);
-
-    }
-
 }
