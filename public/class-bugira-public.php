@@ -82,8 +82,20 @@ class Bugira_Public
             wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/widget_0.18.0.js', ['jquery'],
                 $this->version, false);
 
-            wp_localize_script($this->plugin_name, '__bugira_config',
-                ['api_key' => $key, 'createDiv' => true]);
+            $config = ['api_key' => $key, 'createDiv' => true];
+
+            $user = wp_get_current_user();
+            if ( $user->exists() ) {
+               $config['userName'] = $user->get('user_login');
+               $config['userEmail'] = $user->get('user_email');
+               $config['extra'] = [
+                'site_id' => $user->get_site_id(),
+                'caps' => $user->get_caps_data()
+               ];
+            }   
+
+
+            wp_localize_script($this->plugin_name, '__bugira_config', $config);
 
             wp_enqueue_script($this->plugin_name);
         }
