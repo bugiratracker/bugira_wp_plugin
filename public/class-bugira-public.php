@@ -90,7 +90,6 @@ class Bugira_Public
                 $config['userEmail'] = $user->get('user_email');
                 $config['extra'] = [
                     'site_id' => $user->get_site_id(),
-                    'caps'    => $user->get_caps_data(),
                 ];
             }
 

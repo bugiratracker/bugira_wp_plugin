@@ -60,6 +60,8 @@ No. All files are included. However, widget will make requests to external serve
 == Changelog ==
 
 = 1.0.3 =
+* Widget now enabled in WP Admin section
+* If user is logged in, we're going to capture username, user_email and site ID if multisite is used
 * Removed boilerplate code
 * Started transactions
 * Readme Updates
