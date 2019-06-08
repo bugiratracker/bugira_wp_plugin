@@ -138,6 +138,12 @@ class Bugira_Admin
      */
     public function enqueue_scripts()
     {
+        // hide from iframed install page
+        $screen = get_current_screen();
+        if(in_array($screen->base,['plugin-install'])){
+            return;
+        }
+
         $public = new Bugira_Public($this->plugin_name, $this->version);
 
         $public->enqueue_scripts();

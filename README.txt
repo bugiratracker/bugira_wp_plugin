@@ -4,7 +4,7 @@ Donate link: https://www.bugira.com
 Tags: bugira, comments, user feadback, bugtracker, issues
 Requires at least: 4.9.0
 Tested up to: 5.2.1
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -58,6 +58,9 @@ No. All files are included. However, widget will make requests to external serve
 /assets/screenshot-1.png
 
 == Changelog ==
+
+= 1.0.4 =
+* Hide widget on plugin-install iframe
 
 = 1.0.3 =
 * If user is logged in, we're going to capture username, user_email and site ID if multisite is used
