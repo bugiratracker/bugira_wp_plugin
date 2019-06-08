@@ -15,7 +15,7 @@
  * @wordpress-plugin
  * Plugin Name:       Bugira
  * Plugin URI:        https://github.com/bugiratracker/bugira_wp_plugin
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Description:       Let your users send you bugreports with ease. Get the most information about the bug without asking extra questions ‐ everything to reproduce an issue is collected automatically.
  * Version:           1.0.3
  * Author:            Bugira.com
  * Author URI:        https://www.bugira.com
