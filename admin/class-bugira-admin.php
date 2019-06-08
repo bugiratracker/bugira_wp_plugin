@@ -68,7 +68,7 @@ class Bugira_Admin
         add_settings_field($this->plugin_name . '_api_key', __('Api Key'), [$this, 'plugin_setting_string'],
             $this->plugin_name, 'plugin_main');
 
-        add_settings_section('plugin_main', ucfirst($this->plugin_name) . ' '.__( 'Widget Settings'),
+        add_settings_section('plugin_main', ucfirst($this->plugin_name) . ' ' . __('Widget Settings'),
             [$this, 'plugin_section_text'], $this->plugin_name);
     }
 
@@ -129,5 +129,17 @@ class Bugira_Admin
     {
 
         return $input;
+    }
+
+    /**
+     * Register the JavaScript for the public-facing side of the site.
+     *
+     * @since    1.0.3
+     */
+    public function enqueue_scripts()
+    {
+        $public = new Bugira_Public($this->get_plugin_name(), $this->get_version());
+
+        $public->enqueue_scripts();
     }
 }

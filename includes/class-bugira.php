@@ -156,6 +156,8 @@ class Bugira {
 
 		$this->loader->add_action( 'admin_menu', $plugin_admin, 'plugin_admin_add_page' );
 		$this->loader->add_action( 'admin_init', $plugin_admin, 'plugin_admin_init' );
+
+        $this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 	}
 
 	/**
