@@ -2,7 +2,7 @@
 Contributors: mkozlovatbugira
 Donate link: https://www.bugira.com
 Tags: bugira, comments, user feadback, bugtracker, issues
-Requires at least: 3.0.1
+Requires at least: 4.9.0
 Tested up to: 5.2.0
 Stable tag: 1.0.2
 License: GPLv2 or later
@@ -60,8 +60,9 @@ No. All files are included. However, widget will make requests to external serve
 == Changelog ==
 
 = 1.0.3 =
-* Widget now enabled in WP Admin section
 * If user is logged in, we're going to capture username, user_email and site ID if multisite is used
+* Widget now enabled in WP Admin section
+* Minimum supported version 4.9.0 now
 * Removed boilerplate code
 * Started transactions
 * Readme Updates
