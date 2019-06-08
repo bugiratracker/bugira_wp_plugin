@@ -138,7 +138,7 @@ class Bugira_Admin
      */
     public function enqueue_scripts()
     {
-        $public = new Bugira_Public($this->get_plugin_name(), $this->get_version());
+        $public = new Bugira_Public($this->plugin_name, $this->version);
 
         $public->enqueue_scripts();
     }
